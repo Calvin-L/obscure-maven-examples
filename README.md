@@ -34,7 +34,13 @@ Maven treats differently.
 
 ## Observations (Maven 3.9.7, JDK 17)
 
-A few notes about specific examples I think are interesting.
+Maven expects these tags to be constant:
+
+ - `<parent>` and everything in it
+ - `<groupId>`, `<artifactId>`, and `<version>`
+ - maybe others (see Open Questions below)
+
+A few notes about specific examples I think are interesting:
 
 _`groupid-contains-property` unexpectedly works._ Maven issues a warning, but
 the effective POM has a groupId with the expanded property.
